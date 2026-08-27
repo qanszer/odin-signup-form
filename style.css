@@ -150,3 +150,54 @@ img {
   max-inline-size: 100%;
 }
 
+/*                 */
+/* MAIN CUSTOM CSS */
+/*                 */
+
+body {
+    height: 100vh;
+}
+
+div.container {
+    display: flex;
+}
+
+/* Sidebar */
+
+.sidebar {
+    width: 40%;
+    height: 100vh;
+    position: relative;
+}
+
+.sidebar img.background {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    z-index: -1;
+}
+
+.sidebar-logo-container {
+    position: absolute;
+    width: 100%;
+    background: black;
+    opacity: 0.6;
+    color: white;
+    top: 15rem;
+    text-align: center;
+    font-size: 5rem;
+    font-family: 'Norse';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.logo-image {
+    width: 5rem;
+    height: auto;
+}
+.logo-text {
+    opacity: 1;
+}
