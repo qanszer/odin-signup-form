@@ -182,8 +182,7 @@ div.container {
 .sidebar-logo-container {
     position: absolute;
     width: 100%;
-    background: black;
-    opacity: 0.6;
+    background: #00000060;
     color: white;
     top: 15rem;
     text-align: center;
