@@ -6,6 +6,18 @@
     font-display: swap;
 }
 
+:root {
+    --text-color:            #080909;
+    --page-accent-color:     #394252;
+    --ui-main-bg:            #f9f9f9;
+    --ui-form-bg:            #ffffff;
+    --input-focused-color:   #3b5ec0;
+    --input-incorrect-color: #a72828;
+    --input-neutral-color:   #d2d4d8;
+    --logo-text-overlay-bg:  #00000060;
+    --logo-text:             #ffffff;
+}
+
 /*! modern-normalize v3.0.1 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
 *,
@@ -16,6 +28,7 @@
 
 html {
     font-family:
+        'Ubuntu',
         system-ui,
         'Segoe UI',
         Roboto,
@@ -125,7 +138,7 @@ summary {
     display: list-item;
 }
 
-/* Matt Brictson */
+/* Matt Brictson CSS Reset */
 
 :root {
   line-height: 1.5;
@@ -150,12 +163,23 @@ img {
   max-inline-size: 100%;
 }
 
-/*                 */
-/* MAIN CUSTOM CSS */
-/*                 */
+/* ======================== */
+/* ======================== */
+/* ======================== */
+/*     MAIN CUSTOM CSS      */
+/* ======================== */
+/* ======================== */
+/* ======================== */
+
+::selection {
+	background-color: var(--page-accent-color);
+	color: white;
+}
 
 body {
     height: 100vh;
+    background-color: var(--ui-main-bg);
+    color: var(--text-color);
 }
 
 div.container {
@@ -165,7 +189,7 @@ div.container {
 /* Sidebar */
 
 .sidebar {
-    width: 40%;
+    width: 35%;
     height: 100vh;
     position: relative;
 }
@@ -182,11 +206,11 @@ div.container {
 .sidebar-logo-container {
     position: absolute;
     width: 100%;
-    background: #00000060;
-    color: white;
+    background: var(--logo-text-overlay-bg);
+    color: var(--logo-text);
     top: 15rem;
     text-align: center;
-    font-size: 5rem;
+    font-size: 6rem;
     font-family: 'Norse';
     display: flex;
     justify-content: center;
@@ -194,9 +218,52 @@ div.container {
     padding: 1rem;
 }
 .logo-image {
-    width: 5rem;
+    width: 6rem;
     height: auto;
 }
 .logo-text {
     opacity: 1;
+}
+
+
+/* ============ */
+/*   Main Bar   */
+/* ============ */
+
+.mainbar {
+    width: 75vw;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    align-items: end;
+    height: 35vh;
+    width: 100%;
+    padding-left: 4vw;
+    padding-bottom: 3vw;
+}
+
+.header-text {
+    display: inline-block;
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+/* Input Form */
+
+.input-form {
+    background-color: var(--ui-form-bg);
+    height: 35vh;
+    width: 100%;
+    -webkit-box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.42); 
+    box-shadow: 0px 3px 9px 0px rgba(0,0,0,0.20);
+}
+
+/* Action Area */
+
+.action-area {
+    height: 30vh;
+    width: 100%;
 }
